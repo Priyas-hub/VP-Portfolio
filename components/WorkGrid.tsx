@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 
 const FILTERS = [
   { k: "all", label: "All" },
-  { k: "solo", label: "Solo builds" },
+  { k: "solo", label: "Individual projects" },
   { k: "team", label: "Team" },
 ] as const;
 

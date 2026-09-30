@@ -9,7 +9,7 @@ export default function HowIWork() {
   return (
     <>
       <div className="eyebrow">How I work</div>
-      <h1 className="h-page">Five principles, <em>each one learned by shipping.</em></h1>
+      <h1 className="h-page">Five principles <em>from my work.</em></h1>
       <div className="principles">
         {principles.map((p, i) => (
           <article className="principle" key={p.t}>

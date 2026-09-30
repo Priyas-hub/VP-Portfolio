@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <>
       <div className="eyebrow">Contact</div>
-      <h1 className="h-page">Let&apos;s build something <em>useful.</em></h1>
+      <h1 className="h-page">Get in <em>touch.</em></h1>
       <p className="lead" style={{ marginBottom: 32 }}>
         Open to remote Product Owner, Product Manager and AI-PM roles. Based in India, working on IST, with a 1-month notice period.
       </p>

@@ -35,25 +35,27 @@ export default function Home() {
 
       <section className="sec">
         <div className="sec-head">
-          <div><div className="eyebrow">Shipped</div><h2 className="h-sec">Things I&apos;ve built</h2></div>
+          <div><div className="eyebrow">Work</div><h2 className="h-sec">Things I&apos;ve built</h2></div>
           <Link href="/work/">All work →</Link>
         </div>
         <div className="bento">
           <ProjectCard p={catalyst} />
           <ProjectCard p={ungal} />
-          <ProjectCard p={kidq} size="c-md" showShot={false} />
-          <article className="card c-sm">
-            <div className="eyebrow">At work</div>
-            <div className="stat">Aug &apos;26</div>
-            <p>Took a US client from requirements discovery to go-live. Now I own enhancements.</p>
-            <div className="links"><Link href="/experience/">Experience →</Link></div>
-          </article>
-          <article className="card c-sm">
-            <div className="eyebrow">How I work</div>
-            <h3 style={{ marginTop: 10 }}>“AI must be honest.”</h3>
-            <p>A confident wrong answer does more harm than “I don&apos;t know”.</p>
-            <div className="links"><Link href="/how-i-work/">Principles →</Link></div>
-          </article>
+          <ProjectCard p={kidq} size="c-lg" />
+          <div className="c-stack">
+            <article className="card">
+              <div className="eyebrow">At work</div>
+              <div className="stat">Aug &apos;26</div>
+              <p>Took a US client from requirements discovery to go-live. Now I own enhancements.</p>
+              <div className="links"><Link href="/experience/">Experience →</Link></div>
+            </article>
+            <article className="card">
+              <div className="eyebrow">How I work</div>
+              <h3 style={{ marginTop: 10 }}>“AI must be honest.”</h3>
+              <p>A confident wrong answer does more harm than “I don&apos;t know”.</p>
+              <div className="links"><Link href="/how-i-work/">Principles →</Link></div>
+            </article>
+          </div>
         </div>
       </section>
 

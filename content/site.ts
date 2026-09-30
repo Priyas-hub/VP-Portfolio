@@ -7,7 +7,7 @@
 export const profile = {
   name: "Vishnupriya Saravanar",
   short: "Priya",
-  role: "Product Owner · AI builder",
+  role: "Product Owner · AI products",
   location: "Tirupur, India · Remote (IST)",
   email: "priya3988@gmail.com",
   linkedin: "https://www.linkedin.com/in/vishnupriya-saravanar-57983177",
@@ -24,11 +24,11 @@ export const profile = {
 };
 
 export const hero = {
-  eyebrow: "Product Owner · AI builder · Tirupur, India (Remote)",
-  line1: "Full effort.",
-  line2: "Honest outcomes.",
+  eyebrow: "Product Owner · AI products · Tirupur, India (Remote)",
+  line1: "From messy requirements",
+  line2: "to products people use.",
   lead:
-    "I'm Priya, a Product Owner who builds AI products that give people time back. I take B2B SaaS clients from messy requirements to go-live, and I've shipped two AI products on my own.",
+    "I'm Priya, a Product Owner on a B2B SaaS platform. I work with US and German clients and turn their requirements into working features. Our latest US client went live in Aug 2026. I also design and build AI products that save people time.",
 };
 
 export const ieo = [
@@ -40,12 +40,12 @@ export const ieo = [
   {
     k: "02 · Effort",
     t: "Own it end to end",
-    d: "Discovery, specs, UAT and go-live. And now building the product myself.",
+    d: "From discovery and specs to UAT and go-live.",
   },
   {
     k: "03 · Outcome",
     t: "Measure it honestly",
-    d: "Real metrics and real users, no invented numbers. That holds even when a project doesn't land.",
+    d: "Real metrics and real users. No invented numbers, even when a project does not go as planned.",
   },
 ];
 
@@ -83,13 +83,13 @@ export const projects: Project[] = [
     slug: "catalyst",
     name: "Catalyst",
     tagline: "An AI prompting lab for teachers",
-    tags: ["Solo build", "EdTech · AI"],
+    tags: ["Individual project", "EdTech · AI"],
     kind: "solo",
     problem:
       "Teachers already have AI. What they lack is the skill to prompt it well, and the habit of checking what it gives back.",
     proofLabel: "Decision",
     proof:
-      "The North Star is prompts graded, not worksheets generated. Learning is the point.",
+      "The North Star is prompts graded, not worksheets generated, because the goal is learning.",
     live: [{ label: "Live app", url: "https://catalyst-ochre.vercel.app" }],
     prd: "https://docs.google.com/document/d/1HnpAk6VYtOZN7aV3o4b7hx8mSimT7f4m/edit?usp=sharing",
     image: "/work/catalyst.png",
@@ -103,10 +103,10 @@ export const projects: Project[] = [
       "Built: a mobile-first app that grades the teacher's prompt before generating the worksheet, then walks them through verifying it.",
       "Status: live. A handful of teachers use it, and two parents started using it to make worksheets for their own kids.",
     ],
-    role: "Solo: problem discovery, PRD, design, build (with Claude Code / Codex), launch and iteration.",
+    role: "Individual project: problem discovery, PRD, design, build (with Claude Code and Codex), launch and iteration.",
     discovery: [
-      "9 secondary sources, plus 2 teacher interviews I ran myself.",
-      "One teacher needed 3–4 rounds with the AI and still cross-checked the output by hand. She found government AI workshops lecture-based.",
+      "Desk research, a cohort-wide survey and interviews with schoolteachers.",
+      "A teacher needed 3–4 rounds with the AI and still checked the output by hand. She found government AI workshops too lecture-based to help.",
       "Worksheets are a weekly need; lesson plans are yearly. A habit needs a weekly task.",
     ],
     reframe:
@@ -138,11 +138,11 @@ export const projects: Project[] = [
       "HTML/CSS/JS · Vercel · Supabase (auth, events) · Gemini 2.5 Flash (generation) · Groq, Llama 3.3 70B (grading)",
     metrics: [
       "North Star: prompt_graded events.",
-      "Real use: a handful of teachers, and two parents who found it on their own.",
+      "Real use: a handful of teachers, and two parents who use it for their children.",
       "About 5 teachers have given feedback, which I'm iterating on.",
     ],
     learned: [
-      "Building was the easy part. Getting teachers to come back weekly is the real product problem.",
+      "Building the app was the quicker part. The harder product question is how to bring teachers back every week.",
       "Next direction (not committed): other teacher tasks, and connectors for sharing with parents.",
     ],
     guardrails: [
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     name: "Ungal Kural",
     tamil: "உங்கள் குரல்",
     tagline: "A civic grievance assistant, in Tamil and English",
-    tags: ["Solo build", "9-day MVP", "Civic tech"],
+    tags: ["Individual project", "9-day MVP", "Civic tech"],
     kind: "solo",
     problem:
       "Citizens know something is wrong, but not which officer is responsible, what that officer needs, or how to escalate.",
@@ -169,14 +169,14 @@ export const projects: Project[] = [
     gallery: [
       { src: "/work/uk-describe.png", caption: "Describe the problem by voice or text, in Tamil or English. Personal details blurred." },
       { src: "/work/uk-routing.png", caption: "Routing & escalation: verified officers, level by level. Contact numbers blurred." },
-      { src: "/work/uk-dashboard.png", caption: "The dashboard, in demo mode, tracking each grievance from draft to resolved." },
+      { src: "/work/uk-dashboard.png", caption: "The dashboard: every complaint and its status, from draft to sent to resolved." },
     ],
     tldr: [
-      "Problem: grievance portals exist, but people don't know who owns their problem, so complaints go to social media and die there.",
+      "Problem: grievance portals exist, but people don't know who owns their problem, so complaints go to social media and are not resolved.",
       "Built: voice or text intake in Tamil or English, a complete drafted complaint, and the right officer plus escalation chain.",
       "Status: piloted on real complaints with the NGO counsellor it was built for, in Perundurai Taluk, Erode.",
     ],
-    role: "Solo: research, PRD, routing data, build and pilot. A 9-day MVP.",
+    role: "Individual project: research, PRD, routing data, build and pilot, as a 9-day MVP.",
     discovery: [
       "A real escalation thread from a local residents' WhatsApp forum (a damaged electric pole), where the officer dismissed the complaint.",
       "A Tamil keyword reference I compiled across departments, and a hand-built officer hierarchy for the pilot area.",
@@ -219,7 +219,7 @@ export const projects: Project[] = [
       "The top request is direct WhatsApp sending, with replies flowing back into the app.",
     ],
     guardrails: [
-      "Zero fabricated routings is a success metric, not just a hope.",
+      "Zero fabricated routings is a tracked success metric.",
       "Honest fallback: when data is missing, the app says so instead of showing a plausible fake hierarchy.",
       "Escalation is allowed only after the real response period has passed. No invented SLAs.",
     ],
@@ -248,7 +248,7 @@ export const projects: Project[] = [
       "Problem: autoplay and “one more video” drive how young kids watch.",
       "Built (team): a calm, curated, parent-controlled video space. Parents decide what, how long, and what comes next.",
       "My part: I designed and built the parent experience, from the spec and flow to my own working build.",
-      "Status: live, co-built by the team.",
+      "Status: live. Built by a team of six.",
     ],
     role: "Rethink Buildathon C-8 (7–16 Sep 2026), team of 6. I designed and built the parent experience, from the spec and flow to my own working build (pull request to the team repo). Because of merge conflicts under time pressure, the team deployed a teammate's version of the same parent flow. The scoring engine and backend were teammates' work.",
     discovery: [
@@ -311,7 +311,7 @@ export const teamStudies = [
 ];
 
 export const experience = {
-  intro: "My day job: taking B2B SaaS clients from messy reality to go-live.",
+  intro: "My work: taking B2B SaaS clients from requirements to go-live.",
   company: "OneHermes · B2B SaaS CRM · Remote",
   stories: [
     {
@@ -326,8 +326,8 @@ export const experience = {
     },
     {
       when: "2025 – 2026",
-      title: "Stepped in mid-flight on a German compliance platform",
-      body: "The product lead left mid-engagement. There was no documentation, and the team was down to one engineer. I learned German AVGS rules from scratch and worked out the workflows with the client. I designed the scheduling engine (Outlook sync, 4-way conflict checks, rule-based auto-assignment) and took it through five UATs with zero P1 defects, to 90%+ readiness. Then the partner exited and the project was cancelled. I let it go, and carried the learning forward.",
+      title: "Took over a German compliance platform mid-engagement",
+      body: "The product lead left mid-engagement. There was no documentation, and the team was down to one engineer. I learned German AVGS rules from scratch and worked out the workflows with the client. I designed the scheduling engine (Outlook sync, 4-way conflict checks, rule-based auto-assignment) and took it through five UATs with zero P1 defects, to 90%+ readiness. The German partner later exited and the project was cancelled. I took the lessons into my next client work.",
     },
   ],
   impact: [
@@ -337,12 +337,12 @@ export const experience = {
     "Logic Luminary Award · Jul 2025",
   ],
   more: [
-    "Owned the Payroll module 0→1, from discovery to shipped.",
+    "Owned the Payroll module 0→1, from discovery to release.",
     "Set up the QA function: STLC and regression strategy.",
     "Business UAT for QuickBooks invoice and payroll sync.",
-    "Trained a QA intern from scratch; he now owns one area on his own.",
+    "Trained a QA intern from scratch; he now owns one area independently.",
     "Guide a QA engineer on automation: what to automate, the plan and follow-ups.",
-    "Quick domain learner: German AVGS, US TPA, US home care, insurance, chit funds and civic grievance systems.",
+    "Domains learned on the job: German AVGS, US TPA, US home care, insurance, chit funds and civic grievance systems.",
   ],
   timeline: [
     {
@@ -353,7 +353,7 @@ export const experience = {
     {
       when: "Jul – Sep 2026",
       title: "Mastering AI-Product Management · Rethink Systems",
-      body: "Cohort 8. Six case studies, two solo builds and a team build-a-thon.",
+      body: "Cohort 8. Six case studies, two individual projects and a team build-a-thon.",
     },
     {
       when: "2013 – 2024",
@@ -394,7 +394,7 @@ export const principles = [
   },
   {
     t: "Building is the easy part; judgment is the work.",
-    d: "With AI I can ship fast. Shipping end to end taught me the harder questions: adoption, friction, retention, whether the user's time is well spent, and distribution.",
+    d: "AI makes building faster. Taking products end to end showed me that the harder questions are adoption, friction, retention, whether the user's time is well spent, and distribution.",
     link: "/work",
   },
   {
@@ -406,7 +406,7 @@ export const principles = [
 
 export const focus = {
   title: "AI guardrails & evals",
-  lead: "As AI grows more capable, the work that matters most is making it trustworthy. That means clear guardrails, and evals that show whether it's actually working. This is where I'm heading.",
+  lead: "As AI grows more capable, the work that matters most is making it trustworthy. That means clear guardrails, and evals that show whether it is working. This is the area I am focusing on next.",
   evidence: [
     { project: "Ungal Kural", text: "Zero fabricated routings is a success metric. Routing data is verified, and when data is missing the app falls back honestly.", link: "/work/ungal-kural" },
     { project: "Catalyst", text: "A second model scores each prompt against a rubric before generation, followed by a human verification checklist.", link: "/work/catalyst" },
@@ -417,21 +417,21 @@ export const focus = {
 
 export const about = {
   intro:
-    "I stepped away from tech for ten years to care for my family. I came back, grew from QA to Product Owner, and now I build AI products myself.",
+    "I stepped away from tech for ten years to care for my family. I came back, grew from QA to Product Owner, and now also design and build AI products.",
   paras: [
     "I'm a Product Owner on a B2B SaaS CRM platform, working with clients in the US and Germany. I turn messy real-world requirements into something a small team can ship, then stay with it through go-live.",
-    "My career break isn't a gap in the story; it's where a lot of the story comes from. In those years I cared for my family, completed an MBA, a PG Diploma in Counselling and an MSc in Yoga, and kept working part-time. I came back calmer, more patient, and clearer about what matters.",
+    "My career break shaped much of how I work. In those years I cared for my family, completed an MBA, a PG Diploma in Counselling and an MSc in Yoga, and kept working part-time. I came back calmer, more patient, and clearer about what matters.",
     "I want to build products that give people time and capability back, not products that capture attention: education, civic tech, health, elder care and inclusion, and B2B tools that remove drudgery.",
   ],
   values: [
-    { t: "Curiosity", d: "Always learning. A new domain is a puzzle, not a wall." },
-    { t: "Gratitude", d: "For every chance I've been given, and for the people who gave it." },
-    { t: "Let go, move forward", d: "Forgive, don't carry grudges, and keep the lesson." },
-    { t: "Make a good difference", d: "In the work, and in people's lives." },
+    { t: "Curiosity", d: "I keep learning, and I pick up new domains quickly." },
+    { t: "Gratitude", d: "For the opportunities I have had, and the people who made them possible." },
+    { t: "Let go, move forward", d: "I forgive easily, keep the lesson and move on." },
+    { t: "Make a good difference", d: "I want my work to make a real difference to people." },
   ],
   anchor: {
     quote: "Do your duty with a full heart, and don't be ruled by the result.",
-    note: "My anchor, in my own words, from the Bhagavad Gita (2.47). I own the effort fully, and I measure the outcome honestly.",
+    note: "My anchor, in my own words, from the Bhagavad Gita (2.47). I give my full effort and measure the outcome honestly.",
   },
   outside: ["Yoga practitioner & teacher", "Counsellor", "Former state-level footballer", "IEEE-WIE Joint Secretary (college)"],
 };

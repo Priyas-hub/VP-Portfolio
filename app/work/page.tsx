@@ -8,7 +8,7 @@ export default function Work() {
   return (
     <>
       <div className="eyebrow">Work</div>
-      <h1 className="h-page">Things I&apos;ve shipped, what I owned, and <em>the decisions behind them.</em></h1>
+      <h1 className="h-page">Projects, my role in each, <em>and the key decisions.</em></h1>
       <WorkGrid />
       <section className="sec">
         <div className="sec-head"><div><div className="eyebrow">Rethink AI-PM · Cohort 8</div><h2 className="h-sec">Team case studies</h2></div></div>

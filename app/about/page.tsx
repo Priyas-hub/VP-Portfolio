@@ -4,10 +4,10 @@ import { about, experience } from "@/content/site";
 export const metadata: Metadata = { title: "About" };
 
 const RETURN = [
-  { when: "2010 – 2013", t: "Engineer, then QA lead at Cognizant", d: "I built my eye for edge cases, and learned to lead a team." },
+  { when: "2010 – 2013", t: "Engineer, then QA lead at Cognizant", d: "Built a strong eye for edge cases, and led a QA team." },
   { when: "2013 – 2024", t: "Ten years of caregiving, and growth", d: "An MBA, a PG Diploma in Counselling and an MSc in Yoga, with part-time work throughout." },
-  { when: "2024 – now", t: "The return", d: "Joined OneHermes as QA and grew into Scrum Master, QA Lead and then Product Owner." },
-  { when: "2026", t: "Building with AI", d: "Rethink AI-PM Cohort 8. Shipped Catalyst and Ungal Kural on my own, and KidQ with a team." },
+  { when: "2024 – now", t: "Return to work", d: "Joined OneHermes as QA and grew into Scrum Master, QA Lead and then Product Owner." },
+  { when: "2026", t: "Building with AI", d: "Rethink AI-PM Cohort 8. Built Catalyst and Ungal Kural as individual projects, and KidQ with a team." },
 ];
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
       <div className="prose">{about.paras.map((p) => <p key={p}>{p}</p>)}</div>
 
       <section className="sec">
-        <div className="sec-head"><div><div className="eyebrow">The return</div><h2 className="h-sec">A rising line, not a gap</h2></div></div>
+        <div className="sec-head"><div><div className="eyebrow">The return</div><h2 className="h-sec">Career path</h2></div></div>
         <div className="timeline">
           {RETURN.map((r, i) => (
             <div className={`t-item${i === RETURN.length - 1 ? " lit" : ""}`} key={r.t}>
