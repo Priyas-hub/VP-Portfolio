@@ -16,21 +16,21 @@ export const metadata: Metadata = {
     "Product Owner who builds AI products that give people time back. B2B SaaS delivery for US and German clients, two individual AI projects, and a focus on AI guardrails and evals.",
   openGraph: {
     title: "Vishnupriya Saravanar · Product Owner & AI Builder",
-    description: "From messy requirements to products people use. Case studies: Catalyst, Ungal Kural and KidQ.",
+    description: "Messy rules. Real users. Products that hold up. Case studies: Catalyst, Ungal Kural and KidQ.",
     images: ["/og.png"],
     type: "website",
   },
   icons: { icon: "/favicon.svg" },
 };
 
-export const viewport: Viewport = { themeColor: "#0F1A1B" };
+export const viewport: Viewport = { themeColor: "#F6F2EA" };
 
 // Sets the saved theme before paint, to avoid a flash.
-const themeScript = `try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.dataset.theme='light'}catch(e){}`;
+const themeScript = `try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.dataset.theme='dark'}catch(e){}`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

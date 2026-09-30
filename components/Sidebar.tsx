@@ -2,17 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { House, LayoutGrid, Briefcase, Compass, PenLine, User, Mail, AtSign } from "lucide-react";
+import { House, LayoutGrid, Briefcase, Compass, User, Mail } from "lucide-react";
 import { LinkedinIcon, GithubIcon } from "./BrandIcons";
 import { profile } from "@/content/site";
 import ThemeToggle from "./ThemeToggle";
+import EmailButton from "./EmailButton";
 
 const NAV = [
   { href: "/", label: "Home", Icon: House },
   { href: "/work/", label: "Work", Icon: LayoutGrid },
   { href: "/experience/", label: "Experience", Icon: Briefcase },
   { href: "/how-i-work/", label: "How I work", Icon: Compass },
-  { href: "/writing/", label: "Writing", Icon: PenLine },
   { href: "/about/", label: "About", Icon: User },
   { href: "/contact/", label: "Contact", Icon: Mail },
 ];
@@ -49,9 +49,9 @@ export default function Sidebar() {
         <div className="status"><span className="dot" aria-hidden="true" />{profile.status}</div>
         <a className="resume-link" href={profile.resume} target="_blank" rel="noopener">Download resume ↓</a>
         <div className="icon-row">
-          <a className="icon-btn" href={profile.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn"><LinkedinIcon /></a>
-          <a className="icon-btn" href={profile.github} target="_blank" rel="noopener" aria-label="GitHub"><GithubIcon /></a>
-          <a className="icon-btn" href={`mailto:${profile.email}`} aria-label="Email"><AtSign /></a>
+          <a className="icon-btn" href={profile.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn" data-tip="LinkedIn"><LinkedinIcon /></a>
+          <a className="icon-btn" href={profile.github} target="_blank" rel="noopener" aria-label="GitHub" data-tip="GitHub"><GithubIcon /></a>
+          <EmailButton email={profile.email} />
           <ThemeToggle />
         </div>
       </div>

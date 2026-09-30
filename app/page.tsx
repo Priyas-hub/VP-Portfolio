@@ -12,7 +12,7 @@ export default function Home() {
         <div className="hero-grid">
           <div>
             <div className="eyebrow">{hero.eyebrow}</div>
-            <h1 className="h-display">{hero.line1}<br /><em>{hero.line2}</em></h1>
+            <h1 className="h-display">{hero.line1.split(". ").map((x, i, arr) => (<span key={i}>{x}{i < arr.length - 1 ? "." : ""}<br /></span>))}<em>{hero.line2}</em></h1>
             <p className="lead">{hero.lead}</p>
             <div className="ctas">
               <Link className="btn btn-primary" href="/work/">See my work →</Link>
@@ -46,7 +46,7 @@ export default function Home() {
             <article className="card">
               <div className="eyebrow">At work</div>
               <div className="stat">Aug &apos;26</div>
-              <p>Took a US client from requirements discovery to go-live. Now I own enhancements.</p>
+              <p>A US client, from requirements discovery to go-live. Enhancements continue.</p>
               <div className="links"><Link href="/experience/">Experience →</Link></div>
             </article>
             <article className="card">

@@ -20,6 +20,19 @@ export default function Experience() {
       </div>
 
       <section className="sec">
+        <div className="sec-head"><div><div className="eyebrow">Decisions from client work</div><h2 className="h-sec">Trade-offs, described generally</h2></div></div>
+        <div className="decisions">
+          {experience.decisions.map((d) => (
+            <div className="decision" key={d.chose}>
+              <div><span className="eyebrow">Chose</span><p>{d.chose}</p></div>
+              <div className="rej"><span className="eyebrow">Rejected</span><p>{d.rejected}</p></div>
+              <div className="why"><span className="eyebrow">Why</span><p>{d.why}</p></div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="sec">
         <div className="eyebrow">Impact</div>
         <div className="impact" style={{ marginTop: 14 }}>{experience.impact.map((i) => <span key={i}>{i}</span>)}</div>
       </section>

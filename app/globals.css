@@ -115,6 +115,19 @@ body::before {
 }
 .icon-btn:hover { color: var(--sand); border-color: var(--sand); }
 .icon-btn svg { width: 16px; height: 16px; }
+.icon-btn { position: relative; }
+.icon-btn[data-tip]:hover::after, .icon-btn[data-tip]:focus-visible::after {
+  content: attr(data-tip); position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  white-space: nowrap; font-size: 12px; font-family: var(--sans); padding: 4px 8px; border-radius: 6px;
+  background: var(--text); color: var(--bg); pointer-events: none; z-index: 30;
+}
+.email-wrap { position: relative; display: inline-flex; }
+.email-wrap:has(.toast) .icon-btn::after { display: none; }
+.toast {
+  position: absolute; bottom: calc(100% + 10px); left: -8px; white-space: nowrap; font-size: 12.5px;
+  padding: 7px 10px; border-radius: 8px; background: var(--surface); border: 1px solid var(--sand); color: var(--text);
+  box-shadow: 0 6px 20px rgba(0,0,0,.18); z-index: 40;
+}
 .resume-link { font-size: 14px; font-weight: 600; color: var(--sand); }
 .resume-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -158,7 +171,7 @@ body::before {
   border: 1px solid var(--line); display: grid; place-items: center;
 }
 .diya-card.has-photo { max-width: 270px; width: 100%; justify-self: end; background: linear-gradient(180deg, #34474a 0%, #1f2f31 100%); place-items: end center; }
-:root[data-theme="light"] .diya-card.has-photo { max-width: 270px; width: 100%; justify-self: end; background: linear-gradient(180deg, #e9e3d6 0%, #d9d0bf 100%); }
+:root[data-theme="light"] .diya-card.has-photo { background: linear-gradient(180deg, #e9e3d6 0%, #d9d0bf 100%); }
 .diya-card .photo { position: absolute; inset: 0; background-size: contain; background-repeat: no-repeat; background-position: bottom center; }
 /* Deterrents against casual saving: no right-click, drag, long-press or selection. */
 .protected, .avatar { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; -webkit-user-drag: none; }
@@ -343,7 +356,7 @@ body::before {
   .hero { overflow: hidden; }
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
   .diya-card { aspect-ratio: 16 / 11; }
-  .diya-card.has-photo { aspect-ratio: 4 / 5; max-width: 260px; justify-self: start; }
+  .diya-card.has-photo { aspect-ratio: 4 / 5; max-width: 260px; justify-self: start; margin: 0; }
   .ieo { grid-template-columns: minmax(0, 1fr); }
   .ieo > div + div { border-left: 0; border-top: 1px solid var(--line); }
   .ieo > div + div::before { left: 22px; top: -11px; content: "↓"; }

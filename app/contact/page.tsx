@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="contact-grid">
         <a href={`mailto:${profile.email}`}><span className="eyebrow">Email</span><strong>Write to me</strong><span>{profile.email}</span></a>
         <a href={profile.linkedin} target="_blank" rel="noopener"><span className="eyebrow">LinkedIn</span><strong>Connect</strong><span>vishnupriya-saravanar</span></a>
-        <a href={profile.resume} target="_blank" rel="noopener"><span className="eyebrow">Resume</span><strong>Download PDF</strong><span>Product Owner · AI builder</span></a>
+        <a href={profile.resume} target="_blank" rel="noopener"><span className="eyebrow">Resume</span><strong>Download PDF</strong><span>Product Owner · AI products</span></a>
       </div>
     </>
   );
