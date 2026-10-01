@@ -242,6 +242,13 @@ body::before {
 .now p { font-size: 15px; margin: 0; }
 .now p span { color: var(--muted); margin: 0 8px; }
 
+/* Home experience */
+.home-exp { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+.home-exp .card p { font-size: 15px; }
+.learning-line { margin-top: 32px; padding: 14px 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.scope { max-width: 44em; margin: 4px 0 24px; }
+@media (max-width: 900px) { .home-exp { grid-template-columns: minmax(0, 1fr); } }
+
 /* Filters */
 .chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
 .chip-btn { font: inherit; font-size: 14px; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--muted); cursor: pointer; }

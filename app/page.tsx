@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
-import { hero, ieo, profile, projects, focus } from "@/content/site";
+import { hero, profile, projects, experience, buildIntro, learning } from "@/content/site";
 import Diya from "@/components/Diya";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -15,7 +15,7 @@ export default function Home() {
             <h1 className="h-display">{hero.line1.split(". ").map((x, i, arr) => (<span key={i}>{x}{i < arr.length - 1 ? "." : ""}<br /></span>))}<em>{hero.line2}</em></h1>
             <p className="lead">{hero.lead}</p>
             <div className="ctas">
-              <Link className="btn btn-primary" href="/work/">See my work →</Link>
+              <Link className="btn btn-primary" href="/experience/">See my experience →</Link>
               <a className="btn btn-ghost" href={profile.resume} target="_blank" rel="noopener">Download resume</a>
             </div>
           </div>
@@ -23,53 +23,42 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="ieo">
-        {ieo.map((x) => (
-          <div key={x.k}>
-            <span className="eyebrow">{x.k}</span>
-            <h3>{x.t}</h3>
-            <p>{x.d}</p>
-          </div>
-        ))}
-      </div>
+      <section className="sec">
+        <div className="sec-head">
+          <div><div className="eyebrow">Experience · {experience.company}</div><h2 className="h-sec">Client work</h2></div>
+          <Link href="/experience/">Full experience →</Link>
+        </div>
+        <p className="lead" style={{ marginTop: 0, maxWidth: "44em" }}>{experience.scope}</p>
+        <div className="home-exp">
+          {experience.stories.map((s) => (
+            <article className="card" key={s.title}>
+              <div className="eyebrow">{s.when}</div>
+              <h3 style={{ marginTop: 6 }}>{s.title}</h3>
+              <p>{s.body}</p>
+            </article>
+          ))}
+          <article className="card">
+            <div className="eyebrow">Product</div>
+            <h3 style={{ marginTop: 6 }}>Payroll module</h3>
+            <p>Owned from discovery to release, 0→1.</p>
+          </article>
+        </div>
+      </section>
 
       <section className="sec">
         <div className="sec-head">
-          <div><div className="eyebrow">Work</div><h2 className="h-sec">Things I&apos;ve built</h2></div>
+          <div><div className="eyebrow">Projects</div><h2 className="h-sec">{buildIntro.title}</h2></div>
           <Link href="/work/">All work →</Link>
         </div>
+        <p className="muted" style={{ marginTop: 0, marginBottom: 18, maxWidth: "44em" }}>{buildIntro.line}</p>
         <div className="bento">
-          <ProjectCard p={catalyst} />
-          <ProjectCard p={ungal} />
-          <ProjectCard p={kidq} size="c-lg" />
-          <div className="c-stack">
-            <article className="card">
-              <div className="eyebrow">At work</div>
-              <div className="stat">Aug &apos;26</div>
-              <p>A US client, from requirements discovery to go-live. Enhancements continue.</p>
-              <div className="links"><Link href="/experience/">Experience →</Link></div>
-            </article>
-            <article className="card">
-              <div className="eyebrow">How I work</div>
-              <h3 style={{ marginTop: 10 }}>“AI must be honest.”</h3>
-              <p>A confident wrong answer does more harm than “I don&apos;t know”.</p>
-              <div className="links"><Link href="/how-i-work/">Principles →</Link></div>
-            </article>
-          </div>
+          <ProjectCard p={catalyst} size="c-md" />
+          <ProjectCard p={ungal} size="c-md" />
+          <ProjectCard p={kidq} size="c-md" />
         </div>
       </section>
 
-      <section className="sec focus">
-        <div className="eyebrow" style={{ color: "var(--diya)" }}>Focus</div>
-        <h2 className="h-sec">{focus.title}</h2>
-        <p className="lead" style={{ marginTop: 12 }}>{focus.lead}</p>
-        <div className="focus-grid">
-          {focus.evidence.map((e) => (
-            <Link key={e.project} href={e.link}><strong>{e.project}</strong><span>{e.text}</span></Link>
-          ))}
-        </div>
-        <p className="learning"><ShieldCheck size={18} color="var(--diya)" aria-hidden="true" />{focus.learning}</p>
-      </section>
+      <p className="learning learning-line"><ShieldCheck size={18} color="var(--diya)" aria-hidden="true" /><span><strong>{learning.label}:</strong> {learning.text}</span></p>
 
       <div className="now">
         <span className="eyebrow">● Now</span>

@@ -29,6 +29,11 @@ export default function About() {
       </section>
 
       <section className="sec">
+        <div className="eyebrow">Curious about</div>
+        <ul className="bullets" style={{ marginTop: 14 }}>{about.curious.map((c) => <li key={c}>{c}</li>)}</ul>
+      </section>
+
+      <section className="sec">
         <div className="eyebrow">Outside work</div>
         <div className="pill-list" style={{ marginTop: 14 }}>{about.outside.map((o) => <span key={o}>{o}</span>)}</div>
         <p className="muted" style={{ fontSize: 14.5, marginTop: 16 }}>Education: {experience.education.slice(0, 4).join(" · ")}</p>

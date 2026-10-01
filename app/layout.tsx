@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://vishnupriya-saravanar.vercel.app"),
   title: { default: "Vishnupriya Saravanar · Product Owner & AI Builder", template: "%s · Vishnupriya Saravanar" },
   description:
-    "Product Owner who builds AI products that give people time back. B2B SaaS delivery for US and German clients, two individual AI projects, and a focus on AI guardrails and evals.",
+    "Product Owner at a small B2B SaaS company: learning each client's business and shaping the product to fit it. Also building small AI products to learn building hands-on.",
   openGraph: {
     title: "Vishnupriya Saravanar · Product Owner & AI Builder",
     description: "Messy rules. Real users. Products that hold up. Case studies: Catalyst, Ungal Kural and KidQ.",

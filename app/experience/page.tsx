@@ -8,6 +8,7 @@ export default function Experience() {
     <>
       <div className="eyebrow">Experience · {experience.company}</div>
       <h1 className="h-page">{experience.intro.split(":")[0]}: <em>{experience.intro.split(":")[1]}</em></h1>
+      <p className="lead scope">{experience.scope}</p>
 
       <div className="stories">
         {experience.stories.map((s) => (
@@ -20,7 +21,7 @@ export default function Experience() {
       </div>
 
       <section className="sec">
-        <div className="sec-head"><div><div className="eyebrow">Decisions from client work</div><h2 className="h-sec">Trade-offs, described generally</h2></div></div>
+        <div className="sec-head"><div><div className="eyebrow">Decisions from client work</div><h2 className="h-sec">Product or client: who adapts?</h2></div></div>
         <div className="decisions">
           {experience.decisions.map((d) => (
             <div className="decision" key={d.chose}>

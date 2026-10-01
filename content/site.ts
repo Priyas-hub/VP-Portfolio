@@ -18,8 +18,8 @@ export const profile = {
   status: "Open to PM / AI-PM roles",
   now: [
     "Onboarding a US home-care client",
-    "Iterating on Catalyst with teacher feedback",
     "Learning AI guardrails & evals",
+    "Building as a hobby",
   ],
 };
 
@@ -28,26 +28,8 @@ export const hero = {
   line1: "Messy rules. Real users.",
   line2: "Products that hold up.",
   lead:
-    "I'm Priya, a Product Owner at a B2B SaaS startup. I learn a client's world quickly, from German employment-agency rules to US home-care referrals, and turn it into software a small team can ship. I also build AI products, including a prompting lab for teachers and a civic complaint assistant, designed to be honest about what they don't know.",
+    "I'm Priya, a Product Owner at a small B2B SaaS company. Our clients work in very different fields, so each one starts with learning their business. Then we decide where our CRM should adapt to them, and where they should adapt to the product. Building was the one part of that process I hadn't done myself, so I started building small AI products to learn it hands-on.",
 };
-
-export const ieo = [
-  {
-    k: "01 · Intent",
-    t: "Build what helps",
-    d: "Start from the real problem of the people who will use it.",
-  },
-  {
-    k: "02 · Effort",
-    t: "Own it end to end",
-    d: "From discovery and specs to UAT and go-live.",
-  },
-  {
-    k: "03 · Outcome",
-    t: "Measure it honestly",
-    d: "Real metrics and real users. No invented numbers, even when a project does not go as planned.",
-  },
-];
 
 export type Decision = { chose: string; rejected: string; why: string };
 
@@ -124,19 +106,9 @@ export const projects: Project[] = [
         why: "A worksheet can be produced without the teacher learning anything. A graded prompt can't happen unless the learning loop runs.",
       },
       {
-        chose: "A Verify step on every result, for good",
-        rejected: "A one-time tutorial, or a “hedge when unsure” rule for the AI",
-        why: "A hand check of real CBSE prompts found an answer that was confidently wrong: it merged two separate parts of the Mansabdari system (zat and sawar) into one. The model was not unsure, so a hedge rule would not have caught it. The teacher's own check is the safeguard.",
-      },
-      {
         chose: "One task, built completely",
         rejected: "Three tasks, each half-built",
         why: "Scope went from three tasks to two, then one, as the deadline came closer. One task with the full learning loop is a complete skill. Buttons to unbuilt screens were disabled, not left as dead ends.",
-      },
-      {
-        chose: "Semantic grading, on a separate AI provider",
-        rejected: "Keyword checks, on the same provider",
-        why: "Keyword checks were easy to pass without a good prompt. Hitting Gemini's free-tier limit (about 20 requests a day) led to splitting the work: Gemini generates, Groq grades.",
       },
     ],
     built: [
@@ -207,21 +179,6 @@ export const projects: Project[] = [
         why: "12 of 39 routing rows had no verified number. They show the designation and area, so a worker can find the right office. A contact list produced by an AI tool was checked line by line, and only numbers confirmed on official portals were accepted.",
       },
       {
-        chose: "Store designations, not officer names",
-        rejected: "A list of named officers",
-        why: "Postings rotate, so names go out of date separately from phone numbers. Each contact carries its source, last-verified date and confidence.",
-      },
-      {
-        chose: "Show the full escalation chain, as facts",
-        rejected: "A “go up one level?” prompt",
-        why: "The app can't know whether a higher office will respond, so it doesn't push the worker upward. Escalation is never automatic.",
-      },
-      {
-        chose: "No “delivered” message",
-        rejected: "A sent or delivered confirmation",
-        why: "The app copies the complaint to WhatsApp and cannot see whether it was sent. The worker marks the status.",
-      },
-      {
         chose: "WhatsApp first",
         rejected: "Email, and SMS OTP",
         why: "Officers respond on WhatsApp and rarely check email. SMS OTP was cut because DLT registration takes 7–21 business days.",
@@ -288,16 +245,6 @@ export const projects: Project[] = [
         why: "The AI score can flag a video but never approve it. A high score can't make up for a safety flag, and a check with no data is marked “unknown”, never a pass.",
       },
       {
-        chose: "Voice off on the consent step",
-        rejected: "Voice everywhere, for consistency",
-        why: "Voice adds misrecognition risk to the one step that is compliance-critical (DPDP consent).",
-      },
-      {
-        chose: "Ship only what doesn't depend on unconfirmed backend work",
-        rejected: "Building UI that implies ranking already works",
-        why: "Time-of-day behaviour was split into a copy layer (shipped) and a ranking layer (waiting on backend).",
-      },
-      {
         chose: "The AI score is a trust badge",
         rejected: "The AI score as a gate",
         why: "The parent stays in control. AI informs; it doesn't decide.",
@@ -322,6 +269,11 @@ export const projects: Project[] = [
   },
 ];
 
+export const buildIntro = {
+  title: "Built to learn building",
+  line: "Building with AI is fast. Deciding what to build, and finding what breaks in real use (limits, logins, integrations, live-only failures), is the slower part.",
+};
+
 export const teamStudies = [
   {
     name: "VendorWorld",
@@ -341,23 +293,19 @@ export const teamStudies = [
 ];
 
 export const experience = {
-  intro: "My work: taking B2B SaaS clients from requirements to go-live.",
+  intro: "The role: from the first client meeting to go-live.",
+  scope: "In a small startup, the Product Owner role runs end to end: client meetings, learning the client's industry, deciding how the product should fit, weighing value against effort with developers, testing, and go-live.",
   company: "OneHermes · B2B SaaS CRM · Remote",
   stories: [
     {
-      when: "2026",
-      title: "Took a US client live",
-      body: "Requirements discovery for the sales and onboarding workflows, working directly with the client's team through to go-live in August 2026. The client is live on the platform, and enhancements continue.",
+      when: "Live since Aug 2026",
+      title: "US TPA client",
+      body: "Discovery for their sales and onboarding workflows with the client's team, through build and UAT to go-live on our configurable CRM. Enhancements continue.",
     },
     {
       when: "Sep 2026 – Present",
-      title: "Onboarding a US home-care provider",
-      body: "The third client onboarded. Very messy Excel data (leads, referral partners and contacts) was mapped into the CRM data model, with a sales funnel, SOPs and a walkthrough for the client's team.",
-    },
-    {
-      when: "2025 – 2026",
-      title: "Took over a German compliance platform mid-engagement",
-      body: "The product lead left mid-engagement. There was no documentation, and the team was down to one engineer. German AVGS rules were learned from scratch and the workflows worked out with the client. The scheduling engine (Outlook sync, 4-way conflict checks, rule-based auto-assignment) went through five UATs with zero P1 defects, to 90%+ readiness. The German partner later exited and the project was cancelled. The lessons carried into the next client work.",
+      title: "US home-care provider",
+      body: "A new industry for us, built on referral-driven sales. We learned how their referral partners and contacts work, then shaped the CRM around it: data model, funnel, SOPs and reports. Handover sessions are done, and their team is reviewing the SOPs.",
     },
   ],
   impact: [
@@ -372,33 +320,18 @@ export const experience = {
     "Business UAT for QuickBooks invoice and payroll sync.",
     "Trained a QA intern from scratch; he now owns one area independently.",
     "Guidance for a QA engineer on automation: what to automate, the plan and follow-ups.",
-    "Domains learned on the job: German AVGS, US TPA, US home care, insurance, chit funds and civic grievance systems.",
+    "Domains learned on the job: US TPA, US home care, insurance, chit funds and civic grievance systems.",
   ],
   decisions: [
     {
-      chose: "Lock a plan's start date once work begins",
-      rejected: "Warn, then allow the edit",
-      why: "Once work has started, the original start date is a baseline, and changing it is a change-control step, not a routine edit. The same review found that date changes were moving completed tasks, a live bug that was then fixed.",
+      chose: "One configurable CRM, not custom builds for each client",
+      rejected: "Custom features or per-client configuration for every request",
+      why: "Clients often asked for their own version of a funnel or a rule. Where the configurable CRM already covered the need, it was set up through settings and the client's SOPs. Custom code for one client adds upkeep for every client.",
     },
     {
-      chose: "One default scheduling rule for all clients",
-      rejected: "Per-client configuration",
-      why: "Two clients wanted different behaviour, but neither needed it yet. Building both would add effort for cases nobody was using.",
-    },
-    {
-      chose: "A lean communication-history report",
-      rejected: "In-report search, extra toggles, charts and stat cards",
-      why: "Search is already covered by the export and the planned global search, and a latest-note view already exists on the organisation table. One summary card was enough.",
-    },
-    {
-      chose: "A separate Pin action for saved table views",
-      rejected: "Reusing the existing star or flag icons",
-      why: "Those icons already mean “system default” and “my default”. With a cap of four pinned views, a “+N more” overflow control was not needed either.",
-    },
-    {
-      chose: "Confirm before changing any client data",
-      rejected: "Fixing unclear records silently",
-      why: "In a client data migration, every unclear record was confirmed first, and no names or numbers were guessed. One clean-up that removed referral history was caught in review and reversed.",
+      chose: "A latest-notes view for daily stand-ups, built into the product",
+      rejected: "Treating it as a one-client request",
+      why: "It was a small effort, it saves the client's team time every day, and it is useful across clients. Decided as a team.",
     },
   ],
   timeline: [
@@ -433,50 +366,16 @@ export const experience = {
   ],
 };
 
-export const principles = [
-  {
-    t: "Start with a question, not a spec.",
-    d: "Before building: which problem is really worth solving? On KidQ we picked autoplay over two louder problems. On Ungal Kural the gap turned out to be upstream of the portals.",
-    link: "/work/kidq",
-  },
-  {
-    t: "Measure learning, not output.",
-    d: "Output is easy to count and easy to fake. Catalyst's North Star is prompts graded, because that can't happen unless the teacher is actually learning.",
-    link: "/work/catalyst",
-  },
-  {
-    t: "AI must be honest.",
-    d: "A confident wrong answer does more harm than “I don't know”. AI drafts, verified rules decide, and the product admits what it doesn't know.",
-    link: "/work/ungal-kural",
-  },
-  {
-    t: "Building is the easy part; judgment is the work.",
-    d: "AI makes building faster. Taking products end to end showed me that the harder questions are adoption, friction, retention, whether the user's time is well spent, and distribution.",
-    link: "/work",
-  },
-  {
-    t: "Empathy opens the door.",
-    d: "Ten years away, and a long yoga and introspection practice, taught me to read people well and stay calm when things are messy.",
-    link: "/about",
-  },
-];
-
-export const focus = {
-  title: "AI guardrails & evals",
-  lead: "As AI grows more capable, the work that matters most is making it trustworthy. That means clear guardrails, and evals that show whether it is working. This is the area I am focusing on next.",
-  evidence: [
-    { project: "Ungal Kural", text: "Rules route and the AI only drafts. Contacts are verified, and missing data is shown as missing, never filled in.", link: "/work/ungal-kural" },
-    { project: "Catalyst", text: "A second model scores each prompt against a rubric before generation, followed by a human verification checklist.", link: "/work/catalyst" },
-    { project: "KidQ", text: "The AI content score is a badge, never a gate, with human admin review. No voice on consent.", link: "/work/kidq" },
-  ],
-  learning: "Currently learning how to design evals and guardrails for AI products, and sharing notes as I go.",
+export const learning = {
+  label: "Currently learning",
+  text: "How to test whether an AI product is actually working, starting with the apps I built.",
 };
 
 export const about = {
   intro:
     "I stepped away from tech for ten years to care for my family. I came back, grew from QA to Product Owner, and now also design and build AI products.",
   paras: [
-    "I'm a Product Owner on a B2B SaaS CRM platform, working with clients in the US and Germany. I turn messy real-world requirements into something a small team can ship, then stay with it through go-live.",
+    "I'm a Product Owner on a B2B SaaS CRM platform, working with clients in the US. I learn each client's business, shape our CRM to fit how they work, and stay with it through go-live.",
     "My career break shaped much of how I work. In those years I cared for my family, completed an MBA, a PG Diploma in Counselling and an MSc in Yoga, and kept working part-time. I came back calmer, more patient, and clearer about what matters.",
     "I want to build products that give people time and capability back, not products that capture attention: education, civic tech, health, elder care and inclusion, and B2B tools that remove drudgery.",
   ],
@@ -484,13 +383,17 @@ export const about = {
     { t: "Curiosity", d: "I keep learning, and I pick up new domains quickly." },
     { t: "Gratitude", d: "For the opportunities I have had, and the people who made them possible." },
     { t: "Let go, move forward", d: "Keep the lesson, not the grudge." },
-    { t: "Make a good difference", d: "I want my work to make a real difference to people." },
+    { t: "Give people time back", d: "Build things that save people time and effort." },
   ],
   anchor: {
     quote: "Do your duty with a full heart, and don't be ruled by the result.",
     note: "My anchor, in my own words, from the Bhagavad Gita (2.47). I give my full effort and measure the outcome honestly.",
   },
-  outside: ["Yoga practitioner & teacher", "Counsellor", "Former state-level footballer", "IEEE-WIE Joint Secretary (college)"],
+  curious: [
+    "How people actually adopt a product after it is built",
+    "How different industries run, one client at a time",
+  ],
+  outside: ["Building as a hobby", "Yoga practitioner & teacher", "Counsellor", "Former state-level footballer", "IEEE-WIE Joint Secretary (college)"],
 };
 
 export const writing: { title: string; date: string; excerpt: string; url: string }[] = [

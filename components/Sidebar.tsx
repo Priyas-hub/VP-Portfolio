@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { House, LayoutGrid, Briefcase, Compass, User, Mail } from "lucide-react";
+import { House, LayoutGrid, Briefcase, User, Mail } from "lucide-react";
 import { LinkedinIcon, GithubIcon } from "./BrandIcons";
 import { profile } from "@/content/site";
 import ThemeToggle from "./ThemeToggle";
@@ -10,9 +10,8 @@ import EmailButton from "./EmailButton";
 
 const NAV = [
   { href: "/", label: "Home", Icon: House },
-  { href: "/work/", label: "Work", Icon: LayoutGrid },
   { href: "/experience/", label: "Experience", Icon: Briefcase },
-  { href: "/how-i-work/", label: "How I work", Icon: Compass },
+  { href: "/work/", label: "Work", Icon: LayoutGrid },
   { href: "/about/", label: "About", Icon: User },
   { href: "/contact/", label: "Contact", Icon: Mail },
 ];
