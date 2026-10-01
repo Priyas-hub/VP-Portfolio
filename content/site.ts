@@ -307,6 +307,11 @@ export const experience = {
       title: "US home-care provider",
       body: "A new industry for us, built on referral-driven sales. We learned how their referral partners and contacts work, then shaped the CRM around it: data model, funnel, SOPs and reports. Handover sessions are done, and their team is reviewing the SOPs.",
     },
+    {
+      when: "2025 – 2026 · through UAT",
+      title: "German employment-agency coaching client",
+      body: "Taken over midway, with no documentation. The domain was learned from scratch, and the product went through to UAT: client-specific scheduling, attendance, participant onboarding, expenses and invoicing, digital onboarding, and consent and privacy forms. It didn't go live after the German partner exited.",
+    },
   ],
   impact: [
     "50+ user stories",
@@ -372,12 +377,13 @@ export const learning = {
 };
 
 export const about = {
-  intro:
-    "I stepped away from tech for ten years to care for my family. I came back, grew from QA to Product Owner, and now also design and build AI products.",
+  intro: "Product work, learned by doing.",
+  introEm: "Now growing into AI product management.",
   paras: [
-    "I'm a Product Owner on a B2B SaaS CRM platform, working with clients in the US. I learn each client's business, shape our CRM to fit how they work, and stay with it through go-live.",
-    "My career break shaped much of how I work. In those years I cared for my family, completed an MBA, a PG Diploma in Counselling and an MSc in Yoga, and kept working part-time. I came back calmer, more patient, and clearer about what matters.",
-    "I want to build products that give people time and capability back, not products that capture attention: education, civic tech, health, elder care and inclusion, and B2B tools that remove drudgery.",
+    "Product Owner on a B2B SaaS CRM platform with US clients. Each client brings a new industry to learn, and the product is shaped around how they work, through to go-live.",
+    "Before this came a ten-year break for family. Those years also brought an MBA, a PG Diploma in Counselling, an MSc in Yoga, and steady part-time work. They left more patience, and a clearer sense of what matters.",
+    "In 2026, Rethink Systems' AI Product Management programme gave structure to what the job had taught by doing, and a first hands-on try at building. The learning continues.",
+    "Drawn to products that give people time and capability back: education, civic tech, health, elder care, and B2B tools that remove drudgery.",
   ],
   values: [
     { t: "Curiosity", d: "I keep learning, and I pick up new domains quickly." },
