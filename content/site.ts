@@ -295,6 +295,7 @@ export const teamStudies = [
 export const experience = {
   intro: "The role: from the first client meeting to go-live.",
   scope: "In a small startup, the Product Owner role runs end to end: client meetings, learning the client's industry, deciding how the product should fit, weighing value against effort with developers, testing, and go-live.",
+  ownership: "Primary contact for each client from the first call to go-live, with the founder joining key decisions. The work spans understanding the client's business and existing data, mapping it to our CRM, and deciding what the product adapts to and what the client adapts to.",
   company: "OneHermes · B2B SaaS CRM · Remote",
   stories: [
     {
@@ -314,9 +315,12 @@ export const experience = {
     },
   ],
   impact: [
+    "3 client engagements: 1 live, 1 onboarding, 1 through UAT",
+    "US client live ~1 month after sharing data",
     "50+ user stories",
     "Onboarding ~3 wks → 1–2 wks",
     "~50% fewer dev clarification cycles (developer-reported)",
+    "4 developers · 2 QA engineers guided",
     "Logic Luminary Award · Jul 2025",
   ],
   more: [

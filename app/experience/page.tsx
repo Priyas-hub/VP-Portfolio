@@ -9,6 +9,7 @@ export default function Experience() {
       <div className="eyebrow">Experience · {experience.company}</div>
       <h1 className="h-page">{experience.intro.split(":")[0]}: <em>{experience.intro.split(":")[1]}</em></h1>
       <p className="lead scope">{experience.scope}</p>
+      <p className="scope muted">{experience.ownership}</p>
 
       <div className="stories">
         {experience.stories.map((s) => (

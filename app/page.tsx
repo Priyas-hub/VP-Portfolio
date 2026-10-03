@@ -29,6 +29,7 @@ export default function Home() {
           <Link href="/experience/">Full experience →</Link>
         </div>
         <p className="lead" style={{ marginTop: 0, maxWidth: "44em" }}>{experience.scope}</p>
+        <p className="muted" style={{ maxWidth: "44em" }}>{experience.ownership}</p>
         <div className="home-exp">
           {experience.stories.map((s) => (
             <article className="card" key={s.title}>
